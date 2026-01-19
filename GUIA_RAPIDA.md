@@ -2,6 +2,9 @@
 
 ## 🚀 Inicio Rápido
 
+### ⚠️ Aviso de Seguridad
+**Usuarios de Windows**: Existe una vulnerabilidad en nbconvert. Use la interfaz de Jupyter para exportar HTML en lugar del comando de línea. Ver [SECURITY_ADVISORY.md](SECURITY_ADVISORY.md).
+
 ### 1. Instala las dependencias
 ```bash
 pip install -r requirements.txt
@@ -19,6 +22,13 @@ jupyter notebook Codigos_Test_Minería_NombreApellido.ipynb
 - Verifica que funciona correctamente
 
 ### 4. Exporta a HTML
+
+⚠️ **IMPORTANTE - Usuarios de Windows**: Lee [SECURITY_ADVISORY.md](SECURITY_ADVISORY.md) primero.
+
+**Método Seguro (Todos los sistemas):**
+1. En Jupyter: File → Download as → HTML (.html)
+
+**Método alternativo (Solo Linux/macOS):**
 ```bash
 jupyter nbconvert --to html Codigos_Test_Minería_NombreApellido.ipynb
 ```

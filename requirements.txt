@@ -1,3 +1,4 @@
+# Core Jupyter packages
 jupyter==1.1.1
 jupyter-console==6.6.3
 jupyter-events==0.12.0
@@ -6,16 +7,28 @@ jupyter_client==8.8.0
 jupyter_core==5.9.1
 jupyter_server==2.17.0
 jupyter_server_terminals==0.5.4
+
+# Notebook and JupyterLab
 jupyterlab==4.5.2
 jupyterlab_pygments==0.3.0
 jupyterlab_server==2.28.0
 jupyterlab_widgets==3.0.16
-matplotlib==3.10.8
-matplotlib-inline==0.2.1
-nbconvert==7.16.6
 notebook==7.5.2
 notebook_shim==0.2.4
+
+# SECURITY WARNING: nbconvert <= 7.16.6 has a vulnerability on Windows
+# Impact: Uncontrolled search path leading to potential code execution
+# Mitigation: Use Jupyter web interface for HTML export (File → Download as → HTML)
+# See SECURITY_ADVISORY.md for complete details and alternative solutions
+# Status: No patched version available yet (as of 2026-01-19)
+nbconvert==7.16.6
+
+# Data Science Libraries
 numpy==2.4.1
 pandas==2.3.3
 scikit-learn==1.8.0
+
+# Visualization
+matplotlib==3.10.8
+matplotlib-inline==0.2.1
 seaborn==0.13.2

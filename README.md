@@ -5,6 +5,14 @@ Tarea machine learning practica 1
 
 Este repositorio contiene la plantilla para la documentación del Test de Minería de Datos. El objetivo es proporcionar un formato estructurado para responder las 30 preguntas obligatorias y las preguntas opcionales del examen práctico.
 
+## ⚠️ Aviso de Seguridad
+
+**IMPORTANTE para usuarios de Windows**: Existe una vulnerabilidad de seguridad en nbconvert (todas las versiones <= 7.16.6). 
+
+**Recomendación**: Use el método alternativo de exportación desde la interfaz de Jupyter (File → Download as → HTML) en lugar del comando de línea.
+
+👉 **Lea el archivo [SECURITY_ADVISORY.md](SECURITY_ADVISORY.md) para más detalles y soluciones alternativas.**
+
 ## Estructura del Repositorio
 
 - `Codigos_Test_Minería_NombreApellido.ipynb` - Plantilla de Jupyter Notebook para documentar las respuestas con código
@@ -49,15 +57,21 @@ pip install jupyter notebook nbconvert numpy pandas scikit-learn matplotlib seab
 
 ### 3. Exportar a HTML
 
+⚠️ **Nota de Seguridad**: Si usas Windows, consulta [SECURITY_ADVISORY.md](SECURITY_ADVISORY.md) para métodos seguros de exportación.
+
 Una vez completado el notebook, expórtalo a HTML usando uno de estos métodos:
 
-**Opción 1 - Línea de comandos:**
+**Opción 1 - Interfaz de Jupyter (RECOMENDADO para Windows):**
+1. Abre el notebook en Jupyter
+2. Ve a: File → Download as → HTML (.html)
+3. Guarda el archivo descargado
+
+**Opción 2 - Línea de comandos (Linux/macOS):**
 ```bash
 jupyter nbconvert --to html Codigos_Test_Minería_NombreApellido.ipynb
 ```
 
-**Opción 2 - Interfaz de Jupyter:**
-- File → Download as → HTML (.html)
+**Nota**: Para usuarios de Windows, evite usar la opción de línea de comandos debido a una vulnerabilidad de seguridad en nbconvert.
 
 ### 4. Renombrar Archivos
 
